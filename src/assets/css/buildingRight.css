@@ -1,0 +1,32 @@
+.buildingScroll{
+  overflow-y: scroll;
+}
+/* 全局样式文件，比如style.css */
+ 
+/* 为滚动区域添加一个class */
+.buildingScroll {
+  overflow-y: scroll; /* 垂直滚动条 */
+  scrollbar-color: #2AECDA #494949; /* 滚动条的颜色 */
+  scrollbar-width: thin; /* 滚动条的宽度 */
+  width: 0.0104rem; 
+  height: 0.2208rem; /* 设置一个高度以启用滚动 */
+}
+ 
+/* 针对webkit内核浏览器的自定义样式 */
+.buildingScroll::-webkit-scrollbar {
+  width: 0.0104rem; 
+  height: 0.2208rem;
+}
+ 
+.buildingScroll::-webkit-scrollbar-track {
+  background: #494949; /* 滚动条轨道的颜色 */
+}
+ 
+.buildingScroll::-webkit-scrollbar-thumb {
+  background-color: #2AECDA; /* 滚动条的颜色 */
+  border-radius: 0.026rem; /* 滚动条圆角 */
+}
+ 
+.buildingScroll::-webkit-scrollbar-thumb:hover {
+  background: #2AECDA; /* 滚动条hover颜色 */
+}

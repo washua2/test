@@ -1,0 +1,69 @@
+/* From www.lingdaima.com */
+.cont {
+  display: flex;
+  align-items: center;
+  transform: scale(1);
+}
+
+input[type="checkbox"] {
+  height: 2rem;
+  width: 2rem;
+  margin: 5px;
+  display: inline-block;
+  appearance: none;
+  position: relative;
+  background-color: #262B31;
+  border-radius: 15%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+input[type="checkbox"]:focus {
+  border: 1px solid rgba(0,0,0,0);
+  outline: 0;
+  box-shadow: 0 0 3px 0px rgba(0,0,0,0);
+  -webkit-box-shadow: 0 0 3px 0px rgba(0,0,0,0);
+}
+input[type="checkbox"]::after {
+  content: '';
+  display: block;
+  height: 1rem;
+  width: .5rem;
+  border-bottom: .31rem solid #fcfcfc;
+  border-right: .31rem solid #fcfcfc;
+  opacity: 0;
+  transform: rotate(45deg) translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 20%;
+  transition: .25s ease;
+}
+
+input[type="checkbox"]::before {
+  content: '';
+  display: block;
+  height: 0;
+  width: 0;
+  background-color: #0F62FE;
+  border-radius: 50%;
+  opacity: .5;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transition: .3s ease;
+}
+
+input[type="checkbox"]:checked::before {
+  height: 130%;
+  width: 130%;
+  opacity: 100%;
+}
+
+input[type="checkbox"]:checked::after {
+  opacity: 100%;
+}
+
+span {
+  font-size: 2rem;
+}

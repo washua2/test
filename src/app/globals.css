@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 以下抽象css类的方式，除非能高度复用、或者要用tailwind写法覆盖第三方组件的样式才使用以下方式 */
+@layer components {
+  .custom-btn {
+    @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+  }
+}
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  --Aqua-40: #2AECDA;
+  --theme-bg: rgba(17, 25, 40, 0.90);
+
+
+}
+.font-Inter{
+  font-family:"Inter";
+}
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+} */
+*,
+::before,
+::after {
+  border-width: 0;
+}
+body,html {
+  padding: 0;
+  margin: 0;
+  line-height: normal;
+}
+p,h1{
+  padding: 0;
+  margin: 0;
+}
+li{
+  list-style: none;
+}
