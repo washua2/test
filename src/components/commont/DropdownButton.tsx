@@ -23,7 +23,7 @@ const isRotate = {
 const DropdownRadioButton: React.FC<selfProps> = (props) => {
   // 子传父
   const {getStatus} = props;
-  var [options, setOptions] = useState<Array<object>>([
+  let [options, setOptions] = useState<Array<object>>([
     {
       title: 'Yearly',
       isCheck: false,
@@ -50,8 +50,8 @@ const DropdownRadioButton: React.FC<selfProps> = (props) => {
       index: 5,
     },
   ]);
-  var [countIndex, setCount] = useState(0);
-  var [text, setText] = useState('Weekly');
+  let [countIndex, setCount] = useState(0);
+  let [text, setText] = useState('Weekly');
   //点击高亮
   const targetClick = useCallback((item: any, index: number) => {
     return (event: MouseEvent<HTMLLIElement>) => {

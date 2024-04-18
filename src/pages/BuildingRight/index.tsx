@@ -189,9 +189,9 @@ export default function BuildingRight() {
             className="mt-2"
             
           >
-            {acknowledgedList.map((v) => {
+            {acknowledgedList.map((v,i) => {
               return (
-                <div className="mb-2" style={{
+                <div className="mb-2" key={i} style={{
                   backgroundColor: 'rgba(75, 85, 99, 0.30)',
                 }}>
                   <Acknowledged></Acknowledged>
@@ -233,9 +233,9 @@ export default function BuildingRight() {
         </div>
         {isClose&&(
            <div className="mt-2">
-           {Closed.map((v) => {
+           {Closed.map((v,i) => {
              return (
-               <div className="mb-2" style={{
+               <div className="mb-2" key={i} style={{
                 backgroundColor: 'rgba(75, 85, 99, 0.30)',
               }}>
                  <Acknowledged></Acknowledged>

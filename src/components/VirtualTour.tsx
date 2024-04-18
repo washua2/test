@@ -12,7 +12,7 @@ const show = {
 };
 
 export default function AirQualityIndex() {
-  var [isModel, setCount] = useState(false);
+  let [isModel, setCount] = useState(false);
   // 切换状态
   // const targetClick = useCallback(() => {
   //   return (event: MouseEvent<HTMLDivElement>) => {
